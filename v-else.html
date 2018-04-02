@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue v-showa</title>
+	</head>
+	<body>
+		<script src="./vue.js"></script>
+		<!--这是我们的view-->
+		<div id="app">
+			<p>{{message}}</p>
+			<input type="text" v-model="message"/>
+			<h1 v-show="yes">yes!</h1>
+			<h1 v-show="no">no!</h1>
+			<h1 v-show="name">{{name}}</h1>
+			<h1 v-show="age>=24">{{age}}</h1>
+		</div>
+		<script>
+			//  这是我们的model
+//			var exampleData = {
+//				message: 'hello world'
+//			}
+			//  创建一个vue实例或 viewmodel
+			//  它连接view与model
+			var  vm  = new Vue({
+				el: '#app',
+				data: {
+					message: 'hello world',
+					yes: false,
+					no: true,
+					name: 'zhz',
+					age: 24,
+				}
+			})
+		</script>
+		
+	</body>
+</html>
