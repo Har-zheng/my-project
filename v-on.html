@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue v-on</title>
+		<link rel="stylesheet" href="./css/demo.css"/>
+	</head>
+	<body>
+		<script src="./vue.js"></script>
+		<!--这是我们的view-->
+		<div id="app">
+			<!--v-on指令用于给监听dom事件，它的的用于和v-bind类似-->
+			<p><input type="text" v-model="message"/></p>
+			<p>
+				<!--click事件直接绑定一个方法-->
+				<button v-on:click="greet">greet</button>
+			</p>
+			<p>
+				<!--click事件使用内联语句-->
+				<button v-on:click="say('一首歌')">HI</button>
+			</p>
+			
+			<!--vue.js为最常用的两个指令v-bind和v-on提供了缩写方式。v-bind指令可以简写成一个冒号 v-on指令可以缩写为@符号-->
+		</div>
+		<script>
+			//  这是我们的model
+//			var exampleData = {
+//				message: 'hello world'
+//			}
+			//  创建一个vue实例或 viewmodel
+			//  它连接view与model
+			var  vm  = new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello， vue.js'
+				},
+				methods: {
+					greet: function(){
+						alert(this.message)
+					},
+					say: function(msg) {
+						alert(msg)
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>

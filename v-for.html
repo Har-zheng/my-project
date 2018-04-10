@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue v-for</title>
+	</head>
+	<body>
+		<script src="./vue.js"></script>
+		<!--这是我们的view-->
+		<div id="app">
+		   <table border="1" cellspacing="0" cellpadding="0">
+		   <tr>
+			   	<th>Name</th>
+			   	<th>Age</th>
+			   	<th>sex</th>
+		   </tr>
+		   	<tr v-for="peoples in people ">
+		   		<td>{{peoples.name}}</td>
+		   		<td>{{peoples.age}}</td>
+		   		<td>{{peoples.sex}}</td>
+		   	</tr>
+		   </table>
+		</div>
+		<script>
+			//  这是我们的model
+//			var exampleData = {
+//				message: 'hello world'
+//			}
+			
+			//  创建一个vue实例或 viewmodel
+			//  它连接view与model
+			var  vm  = new Vue({
+				el: '#app',
+				data: {
+					people: [
+					{
+						name: 'zhz',
+						age: 30,
+						sex: 'Male'
+					},
+					{
+						name: 'lcl',
+						age: '27',
+						sex: 'male'
+					},
+					{
+						name: 'zhz',
+						age: 30,
+						sex: 'Male'
+					},
+					{
+						name: 'lcl',
+						age: '27',
+						sex: 'male'
+					},
+					{
+						name: 'zhz',
+						age: 30,
+						sex: 'Male'
+					},
+					{
+						name: 'lcl',
+						age: '27',
+						sex: 'male'
+					}
+					]
+				}
+			})
+		</script>
+		
+	</body>
+</html>

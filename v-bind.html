@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue v-for</title>
+		<link rel="stylesheet" href="./css/demo.css"/>
+	</head>
+	<body>
+		<script src="./vue.js"></script>
+		<!--这是我们的view-->
+		<div id="app">
+		   <ul class="pagination">
+		   	<li v-for="n in pageCount">
+		   		<a href="javascripit:void(0)" v-bind:class="activeNumber === n + 1 ? 'active' : ''"> {{ n + 1 }} </a>
+		   	</li>
+		   </ul>
+		</div>
+		<script>
+			//  这是我们的model
+//			var exampleData = {
+//				message: 'hello world'
+//			}
+			//  创建一个vue实例或 viewmodel
+			//  它连接view与model
+			var  vm  = new Vue({
+				el: '#app',
+				data: {
+					activeNumber: 1,
+					pageCount: 10
+				}
+			})
+		</script>
+		
+	</body>
+</html>

@@ -18,9 +18,8 @@
 			
 			<h1>--------分割线-------</h1>
 			
-			<h1 v-show="name">Name：{{name}}</h1>
-			
-			<h1 v-else="age>=24">Age： {{age}}</h1>
+			<h1 v-show="name.indexOf('keep') >= 0">Name: {{ name }}</h1>
+			<h1 v-else="age=24">Age： {{age}}</h1>
 		</div>
 		<script>
 
@@ -30,8 +29,8 @@
 					message: 'hello world',
 					yes: true,
 					no: true,
-					name: 'zhz',
-					age: 24,
+					name: 'keepfool',
+					age: 24
 				}
 			})
 		</script>
